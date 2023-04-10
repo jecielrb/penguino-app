@@ -21,6 +21,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.penguino.R
 import com.penguino.bluetooth.services.BluetoothLeService
 import com.penguino.databinding.FragmentBluetoothDevicesScanBinding
@@ -143,9 +144,10 @@ class BluetoothDevicesScan : Fragment() {
         binding.ledOff.setOnClickListener {
             bluetoothLeService?.writeToPengu("OFF")
         }
+
         //Nav to Register Name Page
-        binding.buttonRegisterName.setOnClickListener {view : View ->
-            view.findNavController().navigate(R.id.action_bluetoothDevicesScan_to_fragment_register_name)
+        binding.buttonRegisterName.setOnClickListener {
+            findNavController().navigate(R.id.action_bluetoothDevicesScan_to_fragment_register_name)
         }
 
         return binding.root

@@ -9,7 +9,9 @@ import android.view.ViewGroup
 //import androidx.databinding.DataBindingUtil
 //import android.widget.TextView
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.penguino.databinding.FragmentBluetoothDevicesScanBinding
+import com.penguino.databinding.FragmentRegisterNameBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,7 +27,7 @@ class RegisterName : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private lateinit var binding: FragmentBluetoothDevicesScanBinding
+    private lateinit var binding: FragmentRegisterNameBinding
 
 
 
@@ -41,14 +43,10 @@ class RegisterName : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
       //  return inflater.inflate(R.layout.fragment_register_name, container, false)
-        binding = FragmentBluetoothDevicesScanBinding.inflate(inflater)
-
-        binding.buttonRegisterName.setOnClickListener {view : View ->
-            view.findNavController().navigate(R.id.action_bluetoothDevicesScan_to_fragment_register_name)
-        }
+        binding =  FragmentRegisterNameBinding.inflate(layoutInflater)
         return binding.root
     }
 
