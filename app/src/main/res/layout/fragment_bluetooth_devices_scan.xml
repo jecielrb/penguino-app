@@ -45,4 +45,16 @@
         android:layout_height="wrap_content"
         android:text="OFF" />
 
+    <Button
+        android:id="@+id/buttonRegisterName"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:text="REGISTER NAME" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
 </LinearLayout>
